@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct NeoNeo5App: App {
+
+    init() {
+        Container.register(DataTaskPublishing.self) { _ in URLSession.shared }
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabBarView()
         }
     }
 }
